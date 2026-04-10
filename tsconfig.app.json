@@ -8,10 +8,14 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
 
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": true,// 允许导入 TypeScript 文件时保留扩展名
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
