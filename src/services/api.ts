@@ -4,7 +4,7 @@ import { message } from 'antd';
 import type { User } from '@/types/user';
 import type { Permission } from '@/types/permission';
 
-const api = axios.create({ baseURL: '/api' });
+const api = axios.create({ baseURL: ' http://localhost:3000' });
 
 // 全局错误响应拦截
 api.interceptors.response.use(
@@ -23,6 +23,7 @@ export const userApi = {
   update: (id: number, data: User) => api.put(`/users/${id}`, data),
   remove: (id: number) => api.delete(`/users/${id}`),
 };
+
 
 
 
