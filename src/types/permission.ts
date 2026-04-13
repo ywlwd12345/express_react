@@ -3,3 +3,8 @@ export interface Permission {
   name: string;
   description?: string;
 }
+
+export interface LevelPermission {
+  level: number;
+  permission_id: number;
+}

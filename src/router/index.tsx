@@ -7,6 +7,8 @@ import Dashboard from '@/pages/Dashboard';
 import UserList from '@/pages/UserList';
 import Login from '@/pages/Login';
 import PermissionManager from '@/pages/PermissionManager';
+import LevelPermissionManager from '@/pages/LevelPermissionManager';
+import RolePermissionManager from '@/pages/RolePermissionManager';
 
 export const router = createBrowserRouter([
 
@@ -43,6 +45,28 @@ export const router = createBrowserRouter([
                     </AuthGuard>
                 ),
             },
+
+
+            {
+                path: 'LevelPermissionManager',
+                element: (
+                    <AuthGuard roles={['admin']}>
+                        <LevelPermissionManager />
+                    </AuthGuard>
+                ),
+            },
+
+
+            
+            {
+                path: 'RolePermissionManager',
+                element: (
+                    <AuthGuard roles={['admin']}>
+                        <RolePermissionManager />
+                    </AuthGuard>
+                ),
+            },
+
 
             {
                 path: '',

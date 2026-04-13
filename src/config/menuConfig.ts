@@ -13,7 +13,7 @@ export const menuConfig: MenuItem[] = [
     label: '控制台',
     roles: ['admin', 'editor'],
   },
-  
+
   {
     path: '/users',
     label: '用户管理',
@@ -23,7 +23,23 @@ export const menuConfig: MenuItem[] = [
   {
     path: '/PermissionManager',
     label: '权限',
-    roles: ['admin'], // 只有管理员能看
+    roles: ['admin'],
+  },
+
+  //等级权限管理 
+
+  {
+    path: '/LevelPermissionManager',
+    label: '等级权限管理',
+    roles: ['admin'],
+  },
+
+
+  {
+    path: '/RolePermissionManager',
+    label: '角色权限管理',
+    roles: ['admin'],
   }
+
 
 ];
